@@ -1,0 +1,82 @@
+{% extends "layouts/base.html" %} 
+{% load static %}
+
+{% block title %} 
+List of Available Books
+{% endblock title %} 
+
+{% block stylesheets %}
+<style>
+h1 { 
+    color: green;
+} 
+h2 { 
+    color: lightskyblue;
+} 
+p { 
+    font-family: verdana; 
+    font-size: 20px;
+} 
+
+ol {
+    list-style: none;
+    counter-reset: book-counter;
+    padding-left: 0;
+}
+
+li {
+    display: block;
+    counter-increment: book-counter;
+    overflow: hidden; 
+    margin-bottom: 25px; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid #eeeeee; 
+}
+
+li::before {
+    content: counter(book-counter) ") ";
+    color: #674ea7;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+li a {
+    display: inline; 
+    color: #674ea7;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+li img {
+    float: none; 
+    display: block; 
+    margin-top: 10px;
+    width: 100px; 
+    height: auto;
+}
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+    <h1>List of Books</h1>
+    <ol>
+        <li>
+            <a href="{% url 'books.view_one_book' bookId=1 %}">
+                Internet & World Wide Web How to Program
+            </a>
+            <img src="{% static 'book1.jpg' %}" alt="Book 1 Cover" width="100"> 
+        </li>
+        <li>
+            <a href="{% url 'books.view_one_book' bookId=2 %}">
+                C++ How to Program, Late Objects Version
+            </a>
+            <img src="{% static 'book2.jpg' %}" alt="Book 2 Cover" width="100">
+        </li>
+        <li>
+            <a href="{% url 'books.view_one_book' bookId=3 %}">
+                Images in Another Folder
+            </a>
+            <img src="{% static 'book3.jpg' %}" alt="Book 3 Cover" width="100">
+        </li>
+    </ol>
+{% endblock content %}

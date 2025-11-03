@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links Customization Lab</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+    <div class="links-container">
+        
+        <a id="link-green" class="custom-link" href="https://www.qu.edu.sa/" target="_blank">
+            Go to QU website (open a new tab)
+        </a>
+
+        <a id="link-gray" class="custom-link" href="https://www.qu.edu.sa/" target="_self">
+            Go to QU website (open in the same page/tab)
+        </a>
+
+        <a id="link-black" class="custom-link" href="https://www.qu.edu.sa/" target="_self">
+            Go to QU website (open in the same page/tab)
+        </a>
+    </div>
+
+</body>
+</html>

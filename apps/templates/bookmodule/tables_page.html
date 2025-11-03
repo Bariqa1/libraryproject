@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables and Layout</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+<div class="tables-container">
+
+    <!-- Table 1 -->
+    <table class="simple-table">
+        <caption>Table 1: Table of Fruits and Their Prices</caption>
+        <thead>
+            <tr><th>Fruit</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Apple</td><td>$0.25</td></tr>
+            <tr><td>Orange</td><td>$0.50</td></tr>
+            <tr><td>Banana</td><td>$1.00</td></tr>
+            <tr><td>Pineapple</td><td>$2.00</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><th>Total</th><th>$3.75</th></tr>
+        </tfoot>
+    </table>
+
+<!-- Table 2-->
+<table class="complex-table">
+    <caption>Table 2: A more complex sample table</caption>
+    
+    <tr>
+        <td rowspan="2" class="row-image-cell"> 
+             <img src="{% static 'desert.jpg' %}" alt="Desert image" class="camelid-img">
+        </td>
+        <th colspan="4" class="main-title">
+            Camelid comparison<br>
+            Approximate as of 6/2011
+        </th>
+    </tr>
+
+    <tr>
+        <th class="col-header"># of humps</th>
+        <th class="col-header">Indigenous region</th>
+        <th class="col-header">Spits?</th>
+        <th class="col-header">Produces wool?</th>
+    </tr>
+
+    <tr>
+        <th class="row-header">Dromedary</th>
+        <td>1</td>
+        <td>Arabian Peninsula</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <th class="row-header">Camels (bactrian)</th>
+        <td>2</td>
+        <td>Africa/Asia</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <th class="row-header">Llamas</th>
+        <td>1</td>
+        <td>Andes Mountains</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.links-container {
+    width: 100%;
+}
+
+.custom-link {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* الرابط الأول: الأخضر الفاتح  */
+#link-green {
+    background-color: #90EE90; 
+    color: #C00000;
+}
+
+#link-green:hover {
+    background-color: #FFFF00;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#link-green:visited {
+    background-color: #6D875A;
+    color: #C00000;
+}
+
+#link-green:active {
+    background-color: #6C9F6C;
+    transform: translateY(1px);
+}
+
+/* الرابط الثاني: الرمادي الداكن */
+#link-gray {
+    background-color: #464646;
+    color: #FFC000;
+}
+
+#link-gray:hover {
+    background-color: #00FFFF;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#link-gray:visited {
+    background-color: #202020;
+    color: #FFC000;
+}
+
+#link-gray:active {
+    background-color: #333333;
+    transform: translateY(1px);
+}
+
+/* الرابط الثالث: الأسود */
+#link-black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#link-black:hover {
+    background-color: #FF00FF;
+    color: #000000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+#link-black:visited {
+    background-color: #000033;
+    color: #FFFFFF;
+}
+
+#link-black:active {
+    background-color: #111111;
+    transform: translateY(1px);
+}
+
+.task-header {
+    background-color: darkcyan; 
+    color: white;
+    padding: 10px; 
+    margin: 0; 
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: normal; 
+}
+
+
+
+ul, ol {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-left: 20px; 
+    padding-left: 10px;
+}
+li {
+    margin-bottom: 5px;
+}
+
+
+
+
+.tables-container {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Table 1 --- */
+.simple-table {
+    border: 3px double black;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.simple-table th, .simple-table td {
+    border: 2px double black;
+    padding: 3px 6px;
+}
+.simple-table caption {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* --- Table 2 --- */
+.complex-table {
+    border-collapse: collapse; 
+    border: 1px solid black; 
+    width: auto;
+    text-align: center;
+    font-size: 14px;
+}
+.complex-table caption {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.complex-table th,
+.complex-table td {
+    border: 1px solid black;
+    padding: 6px;
+    vertical-align: middle; 
+}
+
+.cell-image { 
+    width: 250px; 
+    padding: 0; 
+    vertical-align: top;
+    border-bottom: none; 
+}
+.camelid-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.empty-header {
+    border-top: none; 
+    border-bottom: none; 
+    width: 250px; 
+}
+
+.row-header {
+    font-weight: bold;
+    text-align: center; 
+    width: 250px; 
+    border-top: none; 
+}
+
+.main-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: middle;
+    border-bottom: none; 
+}
+
+.col-header {
+    font-weight: bold;
+    border-top: none; 
+}

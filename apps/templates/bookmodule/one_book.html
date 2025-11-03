@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %} 
+{% load static %}
+
+{% block content %}
+    <a href="{% url 'books.list_books' %}">Go Back</a>
+    
+    <h1>Details of Book {{ book_id }}</h1>
+    
+    <h2>{{ book.title }}</h2> 
+    <p><strong>Author:</strong> {{ book.author }}</p> 
+    <p>{{ book.description }}</p> 
+
+    <img src="{% static book.image_file %}" alt="{{ book.title }}" width="200">
+{% endblock content %}
