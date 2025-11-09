@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Students & Addresses{% endblock title %}
+
+{% block content %}
+<div class="results">
+  <h2>All Students with Their Cities</h2>
+
+  {% if students %}
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+    {% for s in students %}
+    <tr>
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.address.city }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+    <p>No students found.</p>
+  {% endif %}
+</div>
+{% endblock content %}

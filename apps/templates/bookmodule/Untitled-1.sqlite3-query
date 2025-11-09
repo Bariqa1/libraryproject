@@ -1,0 +1,4 @@
+-- database: ../../../db.sqlite3
+
+SELECT * FROM bookmodule_book
+ORDER BY `title` ASC;

@@ -1,0 +1,6 @@
+<h2>Books (not edition > 3 and no "qu")</h2>
+<ul>
+{% for b in books %}
+  <li>{{ b.title }} – {{ b.author }}</li>
+{% endfor %}
+</ul>

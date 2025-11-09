@@ -1,0 +1,6 @@
+<h2>Students in Each City</h2>
+<ul>
+{% for row in data %}
+  <li>{{ row.address__city }} – {{ row.count }}</li>
+{% endfor %}
+</ul>

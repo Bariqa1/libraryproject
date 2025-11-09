@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Books (Price ≤ 80){% endblock title %}
+
+{% block content %}
+<div class="results">
+    <h2>Books with Price ≤ 80</h2>
+    {% if books %}
+        <p>{{ books|length }} book(s) found:</p>
+        <ul>
+            {% for b in books %}
+            <li>
+                <strong>Title:</strong> {{ b.title }} <br>
+                <strong>Author:</strong> {{ b.author }} <br>
+                <strong>Edition:</strong> {{ b.edition }} <br>
+                <strong>Price:</strong> {{ b.price }}
+            </li>
+            <hr>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found with price ≤ 80.</p>
+    {% endif %}
+</div>
+{% endblock content %}
