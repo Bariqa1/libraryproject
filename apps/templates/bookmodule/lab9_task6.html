@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - Task 6</title>
+</head>
+<body>
+
+<h2>Lab 9 – Task 6: Count of Books Meeting Filter Conditions</h2>
+
+<p>Conditions: price > 50, quantity between 1 and less than 5</p>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Publisher</th>
+        <th>Filtered Books Count</th>
+    </tr>
+
+    {% for p in publishers %}
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.filtered_books }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

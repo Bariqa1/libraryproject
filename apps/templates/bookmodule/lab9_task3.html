@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - Task 3</title>
+</head>
+<body>
+
+<h2>Lab 9 – Task 3: Oldest Book for Each Publisher</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Publisher</th>
+        <th>Oldest Book Date</th>
+    </tr>
+
+    {% for p in publishers %}
+    <tr>
+        <td>{{ p.name }}</td>
+        <td>
+            {% if p.oldest_book_date %}
+                {# Use the date filter for formatting, which handles valid datetime objects #}
+                {{ p.oldest_book_date|date:"F j, Y" }}
+            {% else %}
+                No books available
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -17,6 +17,21 @@
 <body> 
     {% include "includes/header.html" %} 
     
+    <div class="user-bar" style="text-align: right; padding: 10px 20px; background-color: #f8f9fa; border-bottom: 1px solid #ddd;">
+        {% if user.is_authenticated %}
+            <span style="margin-right: 10px; font-weight: bold;">Welcome, {{ user.username }}</span>
+            <a href="{% url 'logout_user' %}" style="color: red; text-decoration: none;">
+                <i class="fa fa-sign-out"></i> Logout
+            </a>
+        {% else %}
+            <a href="{% url 'login_user' %}" style="margin-right: 10px; color: green; text-decoration: none;">
+                <i class="fa fa-sign-in"></i> Login
+            </a>
+            <a href="{% url 'register_user' %}" style="color: blue; text-decoration: none;">
+                <i class="fa fa-user-plus"></i> Register
+            </a>
+        {% endif %}
+    </div>
     <main>
         {% block content %}
         {% endblock content %} 

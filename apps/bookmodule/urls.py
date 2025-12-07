@@ -39,7 +39,35 @@ urlpatterns = [
     path('lab8/task6', views.task6, name='task6'),
     
     path('lab8/task7', views.task7, name='task7'),
+    
+    path('lab9/task1', views.lab9_task1, name='lab9_task1'),
+    path('lab9/task2', views.lab9_task2, name='lab9_task2'),
+    path('lab9/task3', views.lab9_task3, name='lab9_task3'),
+    path('lab9/task4', views.lab9_task4, name='lab9_task4'),
+    path('lab9/task5', views.lab9_task5, name='lab9_task5'),
+    path('lab9/task6', views.lab9_task6, name='lab9_task6'),
 
+    # ---------- Lab 10 - Part 1 ----------
+    path('lab10_part1/listbooks',  views.lab10_part1_listbooks,  name='lab10_part1_listbooks'),
+    path('lab10_part1/addbook',    views.lab10_part1_addbook,    name='lab10_part1_addbook'),
+    path('lab10_part1/editbook/<int:id>',   views.lab10_part1_editbook,   name='lab10_part1_editbook'),
+    path('lab10_part1/deletebook/<int:id>', views.lab10_part1_deletebook, name='lab10_part1_deletebook'),
+
+    # ---------- Lab 10 - Part 2  ----------
+    path('lab10_part2/listbooks',  views.lab10_part2_listbooks,  name='lab10_part2_listbooks'),
+    path('lab10_part2/addbook',    views.lab10_part2_addbook,    name='lab10_part2_addbook'),
+    path('lab10_part2/editbook/<int:id>',   views.lab10_part2_editbook,   name='lab10_part2_editbook'),
+    path('lab10_part2/deletebook/<int:id>', views.lab10_part2_deletebook, name='lab10_part2_deletebook'),
+
+# ---------- lab 11 ----------
+    path('add_student/', views.add_student, name='add_student'),
+    path('list_students/', views.list_students, name='list_students'),
+
+    path('add_student_2/', views.add_student_2, name='add_student_2'),
+    path('list_students_2/', views.list_students_2, name='list_students_2'),
+
+    
+    path('upload_image/', views.upload_image, name='upload_image'),
 ]
 
 

@@ -1,0 +1,27 @@
+<h1>Books - Lab 10 Part 1 (Without Django Forms)</h1>
+
+<a href="{% url 'lab10_part1_addbook' %}">Add New Book</a>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Price</th>
+    <th>Edition</th>
+    <th>Actions</th>
+  </tr>
+  {% for book in books %}
+  <tr>
+    <td>{{ book.id }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.price }}</td>
+    <td>{{ book.edition }}</td>
+    <td>
+      <a href="{% url 'lab10_part1_editbook' book.id %}">Edit</a> |
+      <a href="{% url 'lab10_part1_deletebook' book.id %}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,9 @@
+<h1>Add Book - Lab 10 Part 2 (Django Form)</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
+
+<a href="{% url 'lab10_part2_listbooks' %}">Back to list</a>

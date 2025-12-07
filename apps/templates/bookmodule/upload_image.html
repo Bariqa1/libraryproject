@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %} 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+</head>
+<body>
+    <h2>Upload an Image</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <hr>
+    <h3>Gallery</h3>
+    <div style="display: flex; gap: 10px;">
+        {% for item in images %}
+            <div>
+                <p>{{ item.title }}</p>
+                <img src="{{ item.image.url }}" width="150" height="150" alt="{{ item.title }}">
+            </div>
+        {% empty %}
+            <p>No images uploaded yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
